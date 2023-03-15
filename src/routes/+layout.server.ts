@@ -3919,6 +3919,10 @@ const categories: object[] = [{
 ];
 
 export const load: LayoutServerLoad = async ({ locals }) => {
-  const { user } = await locals.validateUser();
+  // const { user } = await locals.validateUser();
+  const user = {
+    username: "link0047",
+    name: "Jamaal Williams"
+  }
   return { user, categories }
 }
