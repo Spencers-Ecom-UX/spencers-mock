@@ -16,7 +16,15 @@ declare global {
 		}
 		
 		// interface PageData {}
-		// interface Platform {}
+		interface Platform {
+			env: {
+				COUNTER: DurableObjectNamspace;
+			};
+			context: {
+				waitUntil(promise: Promise<any>): void;
+			};
+			caches: CacheStorage & { default: Cache }
+		}
 	}
 
 	// eslint-disable-next-line no-var
